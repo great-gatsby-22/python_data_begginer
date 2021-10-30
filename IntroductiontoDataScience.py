@@ -37,7 +37,7 @@ items = credit_records['item']
 print(items)
 
 #=====================================================================
-#seleccionamos de 
+#seleccionamos de table credit_records, la columna locationsy la imprimimos
 # One or more lines of code contain errors.
 # Fix the errors so that the code runs.
 
@@ -50,11 +50,22 @@ items = credit_records.item
 # Display results
 print(location)
 
+#=====================================================================
+#imprimimos  la información de la tabla mpr 
 # Use info() to inspect mpr
 print(mpr.info())
 
+#=====================================================================
+#imprimimos  en columna  height_inches mayor a  70
+
 # Is height_inches greater than 70 inches?
 print(height_inches > 70)
+
+#=====================================================================
+#guardamos variable de la data mpr , se leccionamos mpr.age mayor a 2 
+#guardamos  en variable  de la data mpr, seleccionamos mpr.status  == "desaparecido"
+#guardamos  en variable  de la data mpr, seleccionamos mpr.breed  == "poodle"
+#seleccionamos  de la tabla credit_records, seleccionamos credit_records.location == "pet paradise"
 
 # Select the dogs where Age is greater than 2
 greater_than_2 = mpr[mpr.Age > 2]
@@ -74,6 +85,11 @@ purchase = credit_records[credit_records.location == 'Pet Paradise']
 # Display
 print(purchase)
 
+
+#=====================================================================
+#plot, lo usamos para hacer gráficas, seleccionamos en x de la  tabla  deshaun la columna  day_of_week y en el eje de la y sera deshaun.hous_worked
+#creara  una gráfica  o plot 
+
 # From matplotlib, import pyplot under the alias plt
 from matplotlib import pyplot as plt
 
@@ -89,6 +105,11 @@ plt.plot(mengfei.day_of_week, mengfei.hours_worked)
 # Display all three line plots
 plt.show()
 
+
+#=====================================================================
+#plot, lo usamos para hacer gráficas, seleccionamos en x de la  tabla  deshaun la columna  day_of_week y en el eje de la y sera deshaun.hous_worked
+#creara  una gráfica  o plot, aqui agregamos el label para indicar que linea pertenece a que datos
+
 # Add a label to Deshaun's plot
 plt.plot(deshaun.day_of_week, deshaun.hours_worked, label="Deshaun")
 
@@ -100,6 +121,12 @@ plt.plot(mengfei.day_of_week, mengfei.hours_worked)
 
 # Display plot
 plt.show()
+
+#=====================================================================
+#plot, lo usamos para hacer gráficas, seleccionamos en x de la  tabla  deshaun la columna  day_of_week y en el eje de la y sera deshaun.hous_worked
+#creara  una gráfica  o plot, aqui agregamos el label para indicar que linea pertenece a que datos
+#agregamos title en la  gráfica
+# en el eje y ponemos que ponemos  el label de  "day of week"
 
 
 # Lines
@@ -118,6 +145,12 @@ plt.legend()
 # Display plot
 plt.show()
 
+
+#=====================================================================
+#gráficamos  de la tabla de seis meses, los meses en el eje x 
+#gráficamos de la tabla  de seis meses, las horas trabajadas
+#agregamos texto en el sector 2.5, 80  un  texto de gráfica
+
 # Create plot
 plt.plot(six_months.month, six_months.hours_worked)
 
@@ -127,6 +160,13 @@ plt.text(2.5, 80, "Missing June data")
 # Display graph
 plt.show()
 
+
+#=====================================================================
+#seleccionamos del data  la columnas year  y  phoenix police dept
+#ponemos nuetro label de  phoenix y el color que es el color de linea 
+#en la siguiente linea  se gráfica del  dataframe data, la columna "year"  y "los angeles police dept"
+#cambiamos  la linea de estilo  con :
+#en la siguiente ponemos  la marca en cada  parte de la gráfica 
 # Change the color of Phoenix to `"DarkCyan"`
 plt.plot(data["Year"], data["Phoenix Police Dept"],
          label="Phoenix", color="DarkCyan")
@@ -145,6 +185,11 @@ plt.legend()
 # Display the plot
 plt.show()
 
+
+#=====================================================================
+#usamos, el cambio de  style de plt 
+
+
 # Change the style to fivethirtyeight
 plt.style.use('fivethirtyeight')
 
@@ -158,6 +203,11 @@ plt.legend()
 
 # Display the plot
 plt.show()
+
+
+#=====================================================================
+#gráficamos , colocamos labels, cambiamos las lineas de estilo y el color de  la linea
+
 
 
 # x should be ransom.letter and y should be ransom.frequency
@@ -250,6 +300,8 @@ plt.bar(hours.officer, hours.avg_hours_worked,
 # Display the plot
 plt.show()
 
+#=====================================================================
+#hacemos un histograma 
 
 # Create a histogram of the column weight
 # from the DataFrame puppies
@@ -262,6 +314,8 @@ plt.ylabel('Number of Puppies')
 # Display
 plt.show()
 
+#=====================================================================
+#hacemos un histograma, ponemos el bins y los rangos 
 
 # Create a histogram
 plt.hist(gravel.radius,
